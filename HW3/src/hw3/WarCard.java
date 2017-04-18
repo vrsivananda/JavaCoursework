@@ -27,7 +27,7 @@ public class WarCard {
         return name;
     }
     
-    int compareTo(WarCard otherCard){
+    public int compareTo(WarCard otherCard){
         int thisValue = this.value/4;
         int otherValue = otherCard.value/4;
         
