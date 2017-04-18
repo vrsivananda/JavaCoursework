@@ -25,6 +25,13 @@ public class WarGame {
             System.out.println(a.toString());
         }
         
+        WarDeck d = new WarDeck();
+        System.out.println("Before Shuffling:::::::::::");
+        d.print();
+        d.shuffle();
+        System.out.println("After Shuffling:::::::::::");
+        d.print();
+        
     }
     
 }

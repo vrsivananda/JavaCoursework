@@ -15,8 +15,10 @@ public class WarDeck {
     private ArrayList<WarCard> cardStack;
     
     public WarDeck(){
-        for (int i = 2; i<54; i++){
-            cardStack.add(new WarCard(i));
+        cardStack = new ArrayList<>();
+        for (int i = 0; i<52; i++){
+            WarCard temp = new WarCard(i);
+            cardStack.add(temp);
         }
     }
         
@@ -30,9 +32,7 @@ public class WarDeck {
         Collections.shuffle(cardStack);
     }
     
-    public void deal(WarPlayer[] players, int numberOfCards){
-        
-    }
+    //public void deal(WarPlayer[] players, int numberOfCards){}
     
     
 }
