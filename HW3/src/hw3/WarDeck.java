@@ -16,7 +16,7 @@ public class WarDeck {
     
     public WarDeck(){
         cardStack = new ArrayList<>();
-        for (int i = 0; i<52; i++){
+        for (int i = 0; i<=51; i++){
             WarCard temp = new WarCard(i);
             cardStack.add(temp);
         }
@@ -32,7 +32,14 @@ public class WarDeck {
         Collections.shuffle(cardStack);
     }
     
-    //public void deal(WarPlayer[] players, int numberOfCards){}
+    public void deal(WarPlayer p1, WarPlayer p2){
+        while (this.cardStack.size() > 0){
+            p1.acceptCard(this.cardStack.get(0));
+            this.cardStack.remove(0);
+            p2.acceptCard(this.cardStack.get(0));
+            this.cardStack.remove(0);
+        }
+    }
     
     
 }

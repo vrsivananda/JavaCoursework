@@ -15,10 +15,16 @@ public class WarCard {
     private String rank;
     
     public WarCard(int value){
+        if (value >= 0 && value <= 51){
+            this.value = value;
+            this.setRank((value)/4 + 2);
+            this.setSuit((value)%4);
+        }
+        else{
+            System.out.println("***Unable to construct card properly. Value is outside range.");
+            System.out.println("***Please enter a value between 1 and 52 inclusive.");
+        }
         
-        this.value = value;
-        this.setRank(value/4 + 2);
-        this.setSuit(value%4);
         
     }
     
